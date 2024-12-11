@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptus SS</title>
+    <style>
+        /* Estilos gerais do corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2e2e; /* Fundo preto escuro */
+            color: #ffffff; /* Texto branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container principal */
+        .container {
+            background-color: #1f1f1f; /* Fundo escuro para o container */
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        /* Título */
+        h1 {
+            color: #2ecc71; /* Cor verde esmeralda */
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo do textarea */
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border: 2px solid #2ecc71; /* Borda verde esmeralda */
+            background-color: #333333; /* Fundo escuro para o campo de texto */
+            color: #ffffff; /* Texto branco */
+            font-size: 1em;
+            border-radius: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #27ae60; /* Borda verde mais intensa quando focado */
+        }
+
+        /* Estilo do botão */
+        button {
+            background-color: #2ecc71; /* Botão verde esmeralda */
+            color: #ffffff; /* Texto branco no botão */
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #27ae60; /* Cor mais intensa quando o botão é hover */
+        }
+
+        /* Estilo da resposta */
+        #response {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #e74c3c; /* Cor vermelha para mensagens de erro */
+        }
+
+        /* Estilo do container do botão e da resposta */
+        .action-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cryptus ServerSide</h1>
+
+        <div class="action-container">
+            <textarea id="scriptInput" placeholder="Escreva seu script Lua aqui..."></textarea>
+            <button id="submitBtn">Executar</button>
+        </div>
+
+        <p id="response"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
